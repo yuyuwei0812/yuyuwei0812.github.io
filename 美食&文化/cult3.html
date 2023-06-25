@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>灵秀湖北</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style>
+			/* 底部 */
+			.footer{
+				/* 设置长度 */
+				width: 100%;
+				/* 上下内边距10 左右0 */
+				padding: 10px 0;
+				/* 字体颜色 */
+				color: #FFF;
+				/* 背景颜色 */
+				background: #333;
+				/* 文字居中 */
+				text-align: center;
+				/* 字体大小 */
+				font-size: 14px;
+			}
+			/* 去掉所有标签的默认内外边距 */
+			*{
+				/* 外边距为0 */
+				margin: 0;
+				/* 内边距为0 */
+				padding: 0;
+			}
+			/* 去除列表的默认样式 */
+			li{
+				list-style: none;
+			}
+			/* 去掉超链接a标签的默认下划线 */
+			a{
+				text-decoration: none;
+			}
+			/* 导航栏 */
+			.header{
+				/* 长度设置为100% */
+				width: 100%;
+				/* 设置高度 */
+				height: 60px;
+				/* 设置行高 */
+				line-height: 60px;
+				/* 设置背景颜色 */
+				background: #FFFFFF;
+				/* 设置阴影 */
+				box-shadow: 2px 3px 5px #ccc;
+			}
+			/* 导航内容区域 */
+			.headerf{
+				/* 设置长度 */
+				width: 1200px;
+				/* 居中显示 */
+				margin: auto;
+			}
+			/* logo图片 */
+			.headerf img{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 设置高度 */
+				height: 35px;
+				/* 12px的上侧外边距 */
+				margin-top: 12px;
+			}
+			/* 导航栏 */
+			.headerf ul{
+				/* 右浮动 靠右对齐 */
+				float: right;
+			}
+			.headerf ul li{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 100px的左侧外边距 */
+				margin-left: 100px;
+			}
+			/* 导航栏a标签 */
+			.headerf ul li a{
+				/* 设置颜色 */
+				color: #000000;
+				/* 底部内边距设置为5px */
+				padding-bottom: 5px;
+			}
+			/* 设置class为active 下的a */
+			.headerf ul .active a{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 鼠标移入效果 */
+			.headerf ul li a:hover{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 文化特色 */
+			.text{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			/* 文章 */
+			.text-list{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行处理 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 30%;
+				/* 上下左右内边距为 10 */
+				padding: 10px;
+				/* 盒子阴影 */
+				box-shadow: 2px 1px 10px #CCC;
+				/* 上下外边距10 */
+				margin: 10px 0;
+			}
+			.text .text-list .list-img{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-img img{
+				/* 设置长度 */
+				width: 100%;
+				/* 设置行高 */
+				height: 220px;
+				/* 防止图片变形 */
+				object-fit: cover;
+			}
+			.text .text-list .list-text{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-text h3{
+				/* 上下外边距为5 左右为0 */
+				margin: 5px 0;
+				/* 设置字体颜色 */
+				color: #333;
+			}
+			.text .text-list .list-text p{
+				/* 设置行高 */
+				line-height: 1.6;
+				/* 设置字体大小 */
+				font-size: 15px;
+				/* 设置字体颜色 */
+				color: #777777;
+			}
+			/* 文化特色详情页 */
+			.content-detail{
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			.content-title{
+				/* 文字居中 */
+				text-align: center;
+				/* 1px的下侧实线 */
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.content-title h3{
+				/* 标题大小 */
+				font-size: 24px;
+				/* 上下外边距20 左右0 */
+				margin: 20px 0;
+			}
+			.content-text{
+				/* 上侧内边距 */
+				padding-top: 20px;
+			}
+			.content-text p{
+				/* 上下外边距5 左右0 */
+				margin: 5px 0;
+				/* 字体大小 */
+				font-size: 16px;
+				/* 首行缩进2格 */
+				text-indent: 2em;
+				/* 文字行高 */
+				line-height: 1.6;
+			}
+			.content-text img{
+				/* 设置成块级元素 */
+				display: block;
+				/* 最大长度 */
+				max-width: 100%;
+				/* 上下外边距5 左右居中 */
+				margin: 5px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<body>
+			<!-- 导航栏 -->
+			<div class="header">
+				<!-- 导航栏内容区 -->
+				<div class="headerf">
+					<!-- logo -->
+					<img src="img/logo.png" alt="">
+					<!-- 菜单栏 -->
+					<ul>
+						<!-- 当前页高亮样式 -->
+						<li>
+							<a href="../首页/page2.html">首页</a>
+						  </li>
+						  <li>
+							  <a href="../美食&文化/美食.html">美食特色</a>
+						  </li>
+						  <li>
+							  <a href="../旅游部分/旅游景点.html">旅游景点</a>
+						  </li>
+						  <li  class="active">
+							  <a href="../美食&文化/文化特色.html">文化特色</a>
+						  </li>
+					</ul>
+				</div>
+			</div>
+	<body>
+		<!-- 文化特色详情页 -->
+		<div class="content-detail">
+			<!-- 文章标题 -->
+			<div class="content-title">
+				<!-- 标题内容 -->
+				<h3>桃花坞木刻年画</h3>
+			</div>
+			<!-- 文章内容 -->
+			<div class="content-text">
+				<p>苏州桃花坞、河南朱仙镇、天津杨柳青、山东潍坊杨家埠、四川锦竹的木版年画，并称为中国五大民间木版年画。苏州桃花坞曾是江南民间年画生产的荟萃之地，发展最早且延续时间较长，人们习惯把苏州年画称作“桃花坞年画”，木刻年画又被称作“姑苏版”或“苏州版”。
+					桃花坞木版年画源于宋代雕版印刷工艺，从绣像图演变而来，还继承了明代的分版分色套印技术。在清雍正、乾隆年间，年出产的年画达百万张以上，达到鼎盛时期。
+				</p>
+				<img src="https://www.zhongguofeng.com/uploads/allimg/yuansu/01/10j15netl2z.jpg" >
+				<p>在民间有“南桃北柳”的说法，指的是南方苏州的桃花坞年画和北方天津杨柳村的年画。这两种年画是中国的两大年画派别，都很出色，不分伯仲。桃花坞年画色彩绚丽，常以紫红色为主调表现欢乐气氛，构图对称、丰满，具有典型的江南地区民间艺术风格。而杨柳青年画既有版画的刀法韵味，又有绘画的笔触色调，构成与一般绘画和其他年画不同的艺术特色。
+					桃花坞木版年画通常以头大身宽的人物为主，色彩以红、黄、蓝、绿、紫、淡墨等色为基调进行组合，给人一种对比强烈鲜明、欢乐明快的视觉感受。桃花坞木版年画的艺术特色主要是刻工精美、题材多样；繁荣与衰落都与当时的社会生产力和经济文化发展水平息息相关；融合了文人画法和西式“泰西笔法”，是中西艺术融合的典范。
+					桃花坞木版年画的制作主要分为三大工序：创作（画）、刻版（刻）、印刷（印）。在画稿完成后，刻工会开始“上样”，也就是把画稿粘贴到梨木板上，再分成线版和套色版若干块。这里需要刻工有着娴熟的技巧，才能保证线条流畅、图稿不走样。
+					一版一色的桃花坞年画，是分版水色套印的。先印墨线版，再分版套色。桃花坞年画通常用色为红、绿、黄、桃红、紫和淡墨等五六套色，利用两种套色重叠造成复色（也就是“环色”），形成丰富的色彩变化。
+					印刷的过程中，印工采用“模版”技法，要保证墨线版和套色版准确，与原作一致，进行装裱，到这里一幅桃花坞木版年画才算完成。
+				</p>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<!-- 文字 -->
+			<p>Copyright © 2022 苏州旅游网站</p>
+		</div>
+	</body>
+</html>

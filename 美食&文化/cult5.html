@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>灵秀湖北</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style>
+			/* 底部 */
+			.footer{
+				/* 设置长度 */
+				width: 100%;
+				/* 上下内边距10 左右0 */
+				padding: 10px 0;
+				/* 字体颜色 */
+				color: #FFF;
+				/* 背景颜色 */
+				background: #333;
+				/* 文字居中 */
+				text-align: center;
+				/* 字体大小 */
+				font-size: 14px;
+			}
+			/* 去掉所有标签的默认内外边距 */
+			*{
+				/* 外边距为0 */
+				margin: 0;
+				/* 内边距为0 */
+				padding: 0;
+			}
+			/* 去除列表的默认样式 */
+			li{
+				list-style: none;
+			}
+			/* 去掉超链接a标签的默认下划线 */
+			a{
+				text-decoration: none;
+			}
+			/* 导航栏 */
+			.header{
+				/* 长度设置为100% */
+				width: 100%;
+				/* 设置高度 */
+				height: 60px;
+				/* 设置行高 */
+				line-height: 60px;
+				/* 设置背景颜色 */
+				background: #FFFFFF;
+				/* 设置阴影 */
+				box-shadow: 2px 3px 5px #ccc;
+			}
+			/* 导航内容区域 */
+			.headerf{
+				/* 设置长度 */
+				width: 1200px;
+				/* 居中显示 */
+				margin: auto;
+			}
+			/* logo图片 */
+			.headerf img{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 设置高度 */
+				height: 35px;
+				/* 12px的上侧外边距 */
+				margin-top: 12px;
+			}
+			/* 导航栏 */
+			.headerf ul{
+				/* 右浮动 靠右对齐 */
+				float: right;
+			}
+			.headerf ul li{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 100px的左侧外边距 */
+				margin-left: 100px;
+			}
+			/* 导航栏a标签 */
+			.headerf ul li a{
+				/* 设置颜色 */
+				color: #000000;
+				/* 底部内边距设置为5px */
+				padding-bottom: 5px;
+			}
+			/* 设置class为active 下的a */
+			.headerf ul .active a{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 鼠标移入效果 */
+			.headerf ul li a:hover{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 文化特色 */
+			.text{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			/* 文章 */
+			.text-list{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行处理 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 30%;
+				/* 上下左右内边距为 10 */
+				padding: 10px;
+				/* 盒子阴影 */
+				box-shadow: 2px 1px 10px #CCC;
+				/* 上下外边距10 */
+				margin: 10px 0;
+			}
+			.text .text-list .list-img{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-img img{
+				/* 设置长度 */
+				width: 100%;
+				/* 设置行高 */
+				height: 220px;
+				/* 防止图片变形 */
+				object-fit: cover;
+			}
+			.text .text-list .list-text{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-text h3{
+				/* 上下外边距为5 左右为0 */
+				margin: 5px 0;
+				/* 设置字体颜色 */
+				color: #333;
+			}
+			.text .text-list .list-text p{
+				/* 设置行高 */
+				line-height: 1.6;
+				/* 设置字体大小 */
+				font-size: 15px;
+				/* 设置字体颜色 */
+				color: #777777;
+			}
+			/* 文化特色详情页 */
+			.content-detail{
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			.content-title{
+				/* 文字居中 */
+				text-align: center;
+				/* 1px的下侧实线 */
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.content-title h3{
+				/* 标题大小 */
+				font-size: 24px;
+				/* 上下外边距20 左右0 */
+				margin: 20px 0;
+			}
+			.content-text{
+				/* 上侧内边距 */
+				padding-top: 20px;
+			}
+			.content-text p{
+				/* 上下外边距5 左右0 */
+				margin: 5px 0;
+				/* 字体大小 */
+				font-size: 16px;
+				/* 首行缩进2格 */
+				text-indent: 2em;
+				/* 文字行高 */
+				line-height: 1.6;
+			}
+			.content-text img{
+				/* 设置成块级元素 */
+				display: block;
+				/* 最大长度 */
+				max-width: 100%;
+				/* 上下外边距5 左右居中 */
+				margin: 5px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<body>
+			<!-- 导航栏 -->
+			<div class="header">
+				<!-- 导航栏内容区 -->
+				<div class="headerf">
+					<!-- logo -->
+					<img src="img/logo.png" alt="">
+					<!-- 菜单栏 -->
+					<ul>
+						<!-- 当前页高亮样式 -->
+						<li>
+							<a href="../首页/page2.html">首页</a>
+						  </li>
+						  <li>
+							  <a href="../美食&文化/美食.html">美食特色</a>
+						  </li>
+						  <li>
+							  <a href="../旅游部分/旅游景点.html">旅游景点</a>
+						  </li>
+						  <li  class="active">
+							  <a href="../美食&文化/文化特色.html">文化特色</a>
+						  </li>
+					</ul>
+				</div>
+			</div>
+	<body>
+		<!-- 文化特色详情页 -->
+		<div class="content-detail">
+			<!-- 文章标题 -->
+			<div class="content-title">
+				<!-- 标题内容 -->
+				<h3>制扇</h3>
+			</div>
+			<!-- 文章内容 -->
+			<div class="content-text">
+				<p>
+					苏扇是苏州特产，包括折扇、檀香扇和绢宫扇三大类，统称为“苏州雅扇”；明清以来，主要在苏州及周边地区广泛流传。
+					　　南宋时苏州便有人自制折扇，到明代宣德年间设作坊生产，并出现名牌产品，如著名的乌竹骨泥金扇。清代顺治年间苏扇成为皇家贡品，制扇业开始兴盛。
+				</p>
+				<img src="https://ts1.cn.mm.bing.net/th/id/R-C.d0a65b1bdbba89b4d22547a1f6c07799?rik=IjJo7gVI0wBzWA&riu=http%3a%2f%2fwww.szfan.com%2fMobile%2fuploadfiles%2fpictures%2fnews%2f20170502123943_7402.jpg_280.jpg&ehk=xQu2Z2pxeysLOXpzDmgU8H72iQIQgLl9boRXVUqit2Q%3d&risl=&pid=ImgRaw&r=0" >
+				<p>苏州雅扇有不少名品，所谓“吴中折扇，凡紫檀、象牙、乌木作股为俗制，惟棕竹、毛竹为之，称怀袖雅物”。折扇的扇骨制作以变化丰富和精工细致闻名，打磨后的竹折扇骨匀细光洁，高雅古朴。
+					　　檀香扇从折扇演变而来，以檀香木制扇，散发天然香味。苏州是檀香扇的发源地，有“拉花”、“烫花”、“雕花”、“画花”等工艺，扇面还要绘上山水花鸟景色，显得雅致宜人。自20世纪初始作以来，檀香扇即以其独有的技艺特色受到国内外人士的喜爱。
+					　　绢宫扇主要有圆形、六角形、长方形、腰圆形等形状，扇面往往绘以山水、花鸟、人物，并题有名人诗句，古色古香，极具观赏性。
+					　　苏州雅扇制作集造型、装裱、雕刻、镶嵌、髹漆等精湛技艺于一体，历来是文人雅士不可或缺的掌中宝物。
+					　　20世纪80年代以后，人们的生活方式发生了急剧变化，电扇和空调的出现使扇子的重要性急剧下降。晚清民国时期仅上海一地苏州扇庄及经营苏州扇面扇骨的文玩店就达上百家，现在只剩下王星记和朵云轩两处。目前苏州本地制扇艺人仅剩三四人，有些工艺已濒于失传。
+
+				</p>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<!-- 文字 -->
+			<p>Copyright © 2022 苏州旅游网站</p>
+		</div>
+	</body>
+</html>

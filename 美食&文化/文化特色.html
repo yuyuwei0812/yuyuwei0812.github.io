@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文化特色</title>
+  <style>
+    /* 底部 */
+    .footer{
+      /* 设置长度 */
+      width: 100%;
+      /* 上下内边距10 左右0 */
+      padding: 10px 0;
+      /* 字体颜色 */
+      color: #FFF;
+      /* 背景颜色 */
+      background: #333;
+      /* 文字居中 */
+      text-align: center;
+      /* 字体大小 */
+      font-size: 14px;
+    }
+    /* 去掉所有标签的默认内外边距 */
+    *{
+      /* 外边距为0 */
+      margin: 0;
+      /* 内边距为0 */
+      padding: 0;
+    }
+    /* 去除列表的默认样式 */
+    li{
+      list-style: none;
+    }
+    /* 去掉超链接a标签的默认下划线 */
+    a{
+      text-decoration: none;
+    }
+    /* 导航栏 */
+    .header{
+      /* 长度设置为100% */
+      width: 100%;
+      /* 设置高度 */
+      height: 60px;
+      /* 设置行高 */
+      line-height: 60px;
+      /* 设置背景颜色 */
+      background: #FFFFFF;
+      /* 设置阴影 */
+      box-shadow: 2px 3px 5px #ccc;
+    }
+    /* 导航内容区域 */
+    .headerf{
+      /* 设置长度 */
+      width: 1200px;
+      /* 居中显示 */
+      margin: auto;
+    }
+    /* logo图片 */
+    .headerf img{
+      /* 左浮动 靠左对齐 */
+      float: left;
+      /* 设置高度 */
+      height: 35px;
+      /* 12px的上侧外边距 */
+      margin-top: 12px;
+    }
+    /* 导航栏 */
+    .headerf ul{
+      /* 右浮动 靠右对齐 */
+      float: right;
+    }
+    .headerf ul li{
+      /* 左浮动 靠左对齐 */
+      float: left;
+      /* 100px的左侧外边距 */
+      margin-left: 100px;
+    }
+    /* 导航栏a标签 */
+    .headerf ul li a{
+      /* 设置颜色 */
+      color: #000000;
+      /* 底部内边距设置为5px */
+      padding-bottom: 5px;
+    }
+    /* 设置class为active 下的a */
+    .headerf ul .active a{
+      /* 设置颜色 */
+      color: #15c5ce;
+      /* 设置背景 */
+      border-bottom: 3px solid #15c5ce;
+    }
+    /* 鼠标移入效果 */
+    .headerf ul li a:hover{
+      /* 设置颜色 */
+      color: #15c5ce;
+      /* 设置背景 */
+      border-bottom: 3px solid #15c5ce;
+    }
+    /* 文化特色 */
+    .text{
+      /* 弹性布局 */
+      display: flex;
+      /* 换行 */
+      flex-wrap: wrap;
+      /* 两端对齐 */
+      justify-content: space-between;
+      /* 设置长度 */
+      width: 1200px;
+      /* 上下外边距50 左右居中 */
+      margin: 50px auto;
+    }
+    /* 文章 */
+    .text-list{
+      /* 弹性布局 */
+      display: flex;
+      /* 换行处理 */
+      flex-wrap: wrap;
+      /* 两端对齐 */
+      justify-content: space-between;
+      /* 设置长度 */
+      width: 30%;
+      /* 上下左右内边距为 10 */
+      padding: 10px;
+      /* 盒子阴影 */
+      box-shadow: 2px 1px 10px #CCC;
+      /* 上下外边距10 */
+      margin: 10px 0;
+    }
+    .text .text-list .list-img{
+      /* 设置长度 */
+      width: 100%;
+    }
+    .text .text-list .list-img img{
+      /* 设置长度 */
+      width: 100%;
+      /* 设置行高 */
+      height: 220px;
+      /* 防止图片变形 */
+      object-fit: cover;
+    }
+    .text .text-list .list-text{
+      /* 设置长度 */
+      width: 100%;
+    }
+    .text .text-list .list-text h3{
+      /* 上下外边距为5 左右为0 */
+      margin: 5px 0;
+      /* 设置字体颜色 */
+      color: #333;
+    }
+    .text .text-list .list-text p{
+      /* 设置行高 */
+      line-height: 1.6;
+      /* 设置字体大小 */
+      font-size: 15px;
+      /* 设置字体颜色 */
+      color: #777777;
+    }
+    /* 文化特色详情页 */
+    .content-detail{
+      /* 设置长度 */
+      width: 1200px;
+      /* 上下外边距50 左右居中 */
+      margin: 50px auto;
+    }
+    .content-title{
+      /* 文字居中 */
+      text-align: center;
+      /* 1px的下侧实线 */
+      border-bottom: 1px solid #CCCCCC;
+    }
+    .content-title h3{
+      /* 标题大小 */
+      font-size: 24px;
+      /* 上下外边距20 左右0 */
+      margin: 20px 0;
+    }
+    .content-text{
+      /* 上侧内边距 */
+      padding-top: 20px;
+    }
+    .content-text p{
+      /* 上下外边距5 左右0 */
+      margin: 5px 0;
+      /* 字体大小 */
+      font-size: 16px;
+      /* 首行缩进2格 */
+      text-indent: 2em;
+      /* 文字行高 */
+      line-height: 1.6;
+    }
+    .content-text img{
+      /* 设置成块级元素 */
+      display: block;
+      /* 最大长度 */
+      max-width: 100%;
+      /* 上下外边距5 左右居中 */
+      margin: 5px auto;
+    }
+    </style>
+</head>
+<body>
+    <body>
+    <!-- 导航栏 -->
+    <div class="header">
+    <!-- 导航栏内容区 -->
+    <div class="headerf">
+    <!-- logo -->
+    <img src="img/logo.png" alt="">
+    <!-- 菜单栏 -->
+    <ul>
+    <!-- 当前页高亮样式 -->
+    <li>
+      <a href="../首页/page2.html">首页</a>
+    </li>
+    <li>
+        <a href="../美食&文化/美食.html">美食特色</a>
+    </li>
+    <li>
+        <a href="../旅游部分/旅游景点.html">旅游景点</a>
+    </li>
+    <li  class="active">
+        <a href="../美食&文化/文化特色.html">文化特色</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    <!-- 文化特色 -->
+    <div class="text">
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult1.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="https://ts1.cn.mm.bing.net/th/id/R-C.4beb2f20416f5c5fc5f0c6aba60828c6?rik=TNlGzxQwuJVGVQ&riu=http%3a%2f%2fimg1.qunarzz.com%2ftravel%2fpoi%2f1511%2f8b%2f16580f93e33b0cf7.jpg_r_400x266x95_f450db88.jpg&ehk=%2bIDnPCFuyIYwNkze43fbVrio52ynicLYTCedNNNndvw%3d&risl=&pid=ImgRaw&r=0" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>苏州评弹</h3>
+    <!-- 简介 -->
+    <p>即苏州评话、苏州弹词。</p>
+    </div>
+    </a>
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult2.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="https://img.zcool.cn/community/010ef45ce795f3a801209aa0550e87.jpg@2o.jpg" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>苏绣</h3>
+    <!-- 简介 -->
+    <p>苏绣，是苏州地区刺绣产品的总称，为江苏省苏州市民间传统美术。</p>
+    </div>
+    </a>
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult3.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="https://n.sinaimg.cn/spider202017/576/w1080h1096/20200107/08f6-imvsvyz4401474.jpg" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>桃花坞木刻年画</h3>
+    <!-- 简介 -->
+    <p>苏州桃花坞木版年画是我国三大木版年画之一，有着400多年历史，与天津杨柳青年画并称“南桃北杨”。</p>
+    </div>
+    </a>
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult4.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="https://img.zcool.cn/community/01104d5d731c59a8012060be8ce3d3.jpg@1280w_1l_2o_100sh.jpg"">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>苏州园林</h3>
+    <!-- 简介 -->
+    <p>苏州古典园林，亦称“苏州园林”，是位于江苏省苏州市境内的中国古典园林的总称。</p>
+    </div>
+    </a>
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult5.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="http://p0.itc.cn/images01/20200628/ac35a4059003444b938a13a114cdd186.jpeg" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>制扇</h3>
+    <!-- 简介 -->
+    <p>苏扇是苏州特产，包括折扇、檀香扇和绢宫扇三大类，统称为“苏州雅扇”。</p>
+    </div>
+    </a>
+    <!-- 文章列表 -->
+    <a class="text-list" href="cult6.html">
+    <!-- 图片 -->
+    <div class="list-img">
+    <img src="https://pic1.zhimg.com/v2-ef85cac48257a388f11eaae94067dfc0_r.jpg" alt="">
+    </div>
+    <!-- 内容 -->
+    <div class="list-text">
+    <!-- 标题 -->
+    <h3>核雕</h3>
+    <!-- 简介 -->
+    <p>核雕是有着悠久历史的立体微雕技艺，乃以杏核、桃核、橄榄核为载体，经过巧思设计后，雕刻成各类艺术作品。</p>
+    </div>
+    </a>
+    </div>
+
+
+</body>
+</html>

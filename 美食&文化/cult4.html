@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>灵秀湖北</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style>
+			/* 底部 */
+			.footer{
+				/* 设置长度 */
+				width: 100%;
+				/* 上下内边距10 左右0 */
+				padding: 10px 0;
+				/* 字体颜色 */
+				color: #FFF;
+				/* 背景颜色 */
+				background: #333;
+				/* 文字居中 */
+				text-align: center;
+				/* 字体大小 */
+				font-size: 14px;
+			}
+			/* 去掉所有标签的默认内外边距 */
+			*{
+				/* 外边距为0 */
+				margin: 0;
+				/* 内边距为0 */
+				padding: 0;
+			}
+			/* 去除列表的默认样式 */
+			li{
+				list-style: none;
+			}
+			/* 去掉超链接a标签的默认下划线 */
+			a{
+				text-decoration: none;
+			}
+			/* 导航栏 */
+			.header{
+				/* 长度设置为100% */
+				width: 100%;
+				/* 设置高度 */
+				height: 60px;
+				/* 设置行高 */
+				line-height: 60px;
+				/* 设置背景颜色 */
+				background: #FFFFFF;
+				/* 设置阴影 */
+				box-shadow: 2px 3px 5px #ccc;
+			}
+			/* 导航内容区域 */
+			.headerf{
+				/* 设置长度 */
+				width: 1200px;
+				/* 居中显示 */
+				margin: auto;
+			}
+			/* logo图片 */
+			.headerf img{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 设置高度 */
+				height: 35px;
+				/* 12px的上侧外边距 */
+				margin-top: 12px;
+			}
+			/* 导航栏 */
+			.headerf ul{
+				/* 右浮动 靠右对齐 */
+				float: right;
+			}
+			.headerf ul li{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 100px的左侧外边距 */
+				margin-left: 100px;
+			}
+			/* 导航栏a标签 */
+			.headerf ul li a{
+				/* 设置颜色 */
+				color: #000000;
+				/* 底部内边距设置为5px */
+				padding-bottom: 5px;
+			}
+			/* 设置class为active 下的a */
+			.headerf ul .active a{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 鼠标移入效果 */
+			.headerf ul li a:hover{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 文化特色 */
+			.text{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			/* 文章 */
+			.text-list{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行处理 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 30%;
+				/* 上下左右内边距为 10 */
+				padding: 10px;
+				/* 盒子阴影 */
+				box-shadow: 2px 1px 10px #CCC;
+				/* 上下外边距10 */
+				margin: 10px 0;
+			}
+			.text .text-list .list-img{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-img img{
+				/* 设置长度 */
+				width: 100%;
+				/* 设置行高 */
+				height: 220px;
+				/* 防止图片变形 */
+				object-fit: cover;
+			}
+			.text .text-list .list-text{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-text h3{
+				/* 上下外边距为5 左右为0 */
+				margin: 5px 0;
+				/* 设置字体颜色 */
+				color: #333;
+			}
+			.text .text-list .list-text p{
+				/* 设置行高 */
+				line-height: 1.6;
+				/* 设置字体大小 */
+				font-size: 15px;
+				/* 设置字体颜色 */
+				color: #777777;
+			}
+			/* 文化特色详情页 */
+			.content-detail{
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			.content-title{
+				/* 文字居中 */
+				text-align: center;
+				/* 1px的下侧实线 */
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.content-title h3{
+				/* 标题大小 */
+				font-size: 24px;
+				/* 上下外边距20 左右0 */
+				margin: 20px 0;
+			}
+			.content-text{
+				/* 上侧内边距 */
+				padding-top: 20px;
+			}
+			.content-text p{
+				/* 上下外边距5 左右0 */
+				margin: 5px 0;
+				/* 字体大小 */
+				font-size: 16px;
+				/* 首行缩进2格 */
+				text-indent: 2em;
+				/* 文字行高 */
+				line-height: 1.6;
+			}
+			.content-text img{
+				/* 设置成块级元素 */
+				display: block;
+				/* 最大长度 */
+				max-width: 100%;
+				/* 上下外边距5 左右居中 */
+				margin: 5px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<body>
+			<!-- 导航栏 -->
+			<div class="header">
+				<!-- 导航栏内容区 -->
+				<div class="headerf">
+					<!-- logo -->
+					<img src="img/logo.png" alt="">
+					<!-- 菜单栏 -->
+					<ul>
+						<!-- 当前页高亮样式 -->
+						<li>
+							<a href="../首页/page2.html">首页</a>
+						  </li>
+						  <li>
+							  <a href="../美食&文化/美食.html">美食特色</a>
+						  </li>
+						  <li>
+							  <a href="../旅游部分/旅游景点.html">旅游景点</a>
+						  </li>
+						  <li  class="active">
+							  <a href="../美食&文化/文化特色.html">文化特色</a>
+						  </li>
+					</ul>
+				</div>
+			</div>
+	<body>
+		<!-- 文化特色详情页 -->
+		<div class="content-detail">
+			<!-- 文章标题 -->
+			<div class="content-title">
+				<!-- 标题内容 -->
+				<h3>苏州园林</h3>
+			</div>
+			<!-- 文章内容 -->
+			<div class="content-text">
+				<p>
+					中国东部江苏省的苏州是中国著名的历史文化名城，这里素来以山水秀丽，园林典雅而闻名天下，有“江南园林甲天下，苏州园林甲江南”的美称。根据记载，苏州城内有大小园林将近200处。其中沧浪亭、狮子林、拙政园和留园分别代表着宋（公元960～1278年）、元（公元1271～1368年）、明（公元1368～1644年）、清（公元1644～1911年）四个朝代的艺术风格，被称为苏州“四大名园”，网师园也颇负盛名。
+				</p>
+				<img src="https://pic.ntimg.cn/20110304/6647776_112750640147_2.jpg" >
+				<p>
+					沧浪亭位于苏州城南，是苏州最古老的一所园林，始建于北宋庆历年间（公元1041～1048年），南宋初年（公元12世纪初）曾为名将韩世忠的住宅。沧浪亭造园艺术与众不同，未进园门便设一池绿水绕于园外。园内以山石为主景，迎面一座土山，沧浪石亭便坐落其上。山下凿有水池，山水之间以一条曲折的复廊相连。假山东南部的明道堂是园林的主建筑，此外还有五百名贤祠、看山楼、翠玲珑馆、仰止亭和御碑亭等建筑与之衬映。
+					狮子林位于苏州城内东北部，始建于元至正二年（公元1342年）。因园内石峰林立，多状似狮子，故名“狮子林”。狮子林平面呈长方形，面积约15亩，林内的湖石假山多且精美，建筑分布错落有致，主要建筑有燕誉堂、见山楼、飞瀑亭、问梅阁等。狮子林主题明确，景深丰富，个性分明，假山洞壑匠心独具，一草一木别有风韵。
+					留园坐落在苏州市阊门外，始建于明代。清代时称“寒碧山庄”，俗称“刘园”，后改为“留园”。留园占地约50亩，中部以山水为主，是全园的精华所在。主要建筑有涵碧山房、明瑟楼、远翠阁曲溪楼、清风池馆等处。留园内建筑的数量在苏州诸园中居冠，其在空间上的突出处理，充分体现了古代造园家的高超技艺和卓越智慧。
+					拙政园位于苏州娄门内，是苏州最大的一处园林，也是苏州园林的代表作，明正德年间（公元1506～1521年）修建。现存园貌多为清末时（公元20世纪初）所形成，占地面积达62亩。拙政园的布局主题以水为中心，池水面积约占总面积的五分之一，各种亭台轩榭多临水而筑。主要建筑有远香堂、雪香云蔚亭、待霜亭、留听阁、十八曼陀罗花馆、三十六鸳鸯馆等。拙政园建筑布局疏落相宜、构思巧妙，风格清新秀雅、朴素自然。
+					网师园位于苏州城东南部。始建于南宋时期（公元1127～1279年），当时称为“渔隐”。清代乾隆年间（公元1736～1796年）重建，取“渔隐”旧意，改名为“网师园”。网师园占地约半公顷，是苏州园林中最小的一座。园内主要建筑有丛桂轩、濯缨水阁、看松读画轩、殿春簃等。网师园的亭台楼榭无不临水，全园处处有水可依，各种建筑配合得当，布局紧凑，以精巧见长，具有典型的明代风格。
+					苏州园林在有限的空间范围内，利用独特的造园艺术，将湖光山色与亭台楼阁融为一体，把生意盎然的自然美和创造性的艺术美融为一体，令人不出城市便可感受到山林的自然之美。此外，苏州园林还有着极为丰富的文化底蕴，它所反映出的造园艺术，建筑特色以及文人骚客门留下的诗画墨迹，无不折射出中国传统文化中的精髓和内涵。
+
+				</p>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<!-- 文字 -->
+			<p>Copyright © 2022 苏州旅游网站</p>
+		</div>
+	</body>
+</html>

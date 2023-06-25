@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美食特色</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <style>
+        /* 底部 */
+        .footer{
+            /* 设置长度 */
+            width: 100%;
+            /* 上下内边距10 左右0 */
+            padding: 10px 0;
+            /* 字体颜色 */
+            color: #FFF;
+            /* 背景颜色 */
+            background: #333;
+            /* 文字居中 */
+            text-align: center;
+            /* 字体大小 */
+            font-size: 14px;
+        }
+        /* 去掉所有标签的默认内外边距 */
+        *{
+            /* 外边距为0 */
+            margin: 0;
+            /* 内边距为0 */
+            padding: 0;
+        }
+        /* 去除列表的默认样式 */
+        li{
+            list-style: none;
+        }
+        /* 去掉超链接a标签的默认下划线 */
+        a{
+            text-decoration: none;
+        }
+        /* 导航栏 */
+        .header{
+            /* 长度设置为100% */
+            width: 100%;
+            /* 设置高度 */
+            height: 60px;
+            /* 设置行高 */
+            line-height: 60px;
+            /* 设置背景颜色 */
+            background: #FFFFFF;
+            /* 设置阴影 */
+            box-shadow: 2px 3px 5px #ccc;
+        }
+        /* 导航内容区域 */
+        .headerf{
+            /* 设置长度 */
+            width: 1200px;
+            /* 居中显示 */
+            margin: auto;
+        }
+        /* logo图片 */
+        .headerf img{
+            /* 左浮动 靠左对齐 */
+            float: left;
+            /* 设置高度 */
+            height: 35px;
+            /* 12px的上侧外边距 */
+            margin-top: 12px;
+        }
+        /* 导航栏 */
+        .headerf ul{
+            /* 右浮动 靠右对齐 */
+            float: right;
+        }
+        .headerf ul li{
+            /* 左浮动 靠左对齐 */
+            float: left;
+            /* 100px的左侧外边距 */
+            margin-left: 100px;
+        }
+        /* 导航栏a标签 */
+        .headerf ul li a{
+            /* 设置颜色 */
+            color: #000000;
+            /* 底部内边距设置为5px */
+            padding-bottom: 5px;
+        }
+        /* 设置class为active 下的a */
+        .headerf ul .active a{
+            /* 设置颜色 */
+            color: #15c5ce;
+            /* 设置背景 */
+            border-bottom: 3px solid #15c5ce;
+        }
+        /* 鼠标移入效果 */
+        .headerf ul li a:hover{
+            /* 设置颜色 */
+            color: #15c5ce;
+            /* 设置背景 */
+            border-bottom: 3px solid #15c5ce;
+        }
+        /*美食 */
+        .ms{
+            /* 相对定位 */
+            position: relative;
+            /* 设置长度 */
+            width: 1200px;
+            /* 上下外边距50px 左右居中 */
+            margin: 50px auto;
+        }
+        .ms ul{
+            /* 弹性布局 */
+            display: flex;
+            /* 换行处理 */
+            flex-wrap: wrap;
+            /* 子元素横向两端对齐 */
+            justify-content: space-between;
+        }
+        .ms ul li {
+            list-style: none;
+            /* 相对定位 */
+            position: relative;
+            /* 设置长度 */
+            width: 280px;
+            /* 设置高度 */
+            height: 220px;
+            /* 下侧外边距为20px */
+            margin-bottom: 20px;
+        }
+        .ms img{
+            display: block;
+            /* 设置长度 */
+            width: 100%;
+            /* 设置高度 */
+            height: 100%;
+            /* 防止图片变形 */
+            object-fit: cover;
+        }
+        .ms p{
+            /* 绝对定位 */
+            position: absolute;
+            /* 父级底部的0位置 */
+            bottom: 0;
+            /* 父级左侧的0位置 */
+            left: 0;
+            /* 设置字体大小 */
+            font-size: 16px;
+            /* 设置长度 */
+            width: 92%;
+            /* 上下左右的内边距为父级的4% */
+            padding: 4%;
+            /* 设置字体颜色 */
+            color: #FFFFFF;
+            /* 设置背景颜色*/
+            background-color: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+<body>
+<!-- 导航栏 -->
+<div class="header">
+    <!-- 导航栏内容区 -->
+    <div class="headerf">
+        <!-- logo -->
+        <img src="img/logo.png" alt="">
+        <!-- 菜单栏 -->
+        <ul>
+            <!-- 当前页高亮样式 -->
+            <li>
+                <a href="../首页/page2.html">首页</a>
+            </li>
+            <li class="active">
+                <a href="../美食&文化/美食.html">美食特色</a>
+            </li>
+            <li>
+                <a href="../旅游部分/旅游景点.html">旅游景点</a>
+            </li>
+            <li>
+                <a href="../美食&文化/文化特色.html">文化特色</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 美食 -->
+<div class="ms">
+    <ul>
+        <li>
+            <!-- 图片 -->
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.13b95a1912398b20302fa89852407a3c?rik=JzkGKuYLDr9WSg&riu=http%3a%2f%2fugc.qpic.cn%2fbaikepic2%2f23937%2fcut-20150608100346-59858293.jpg%2f0&ehk=hzTiuUEhPg2ICRiKc7XwPsf5mu4KZqKZF8X9aNPp%2bEY%3d&risl=&pid=ImgRaw&r=0">
+            <!-- 描述 -->
+            <p>松鼠鳜鱼</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://cp1.douguo.com/upload/caiku/d/4/c/yuan_d4a361262f27c51d93a2e5f80f590c4c.jpeg">
+            <!-- 描述 -->
+            <p>响油鳝糊</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://ts1.cn.mm.bing.net/th/id/R-C.2eada65d2e7cb3c83487fff48256c4b7?rik=OBLLRAxtQ1z2pg&riu=http%3a%2f%2fwap.sz2500.com%2fadmin_2500sz%2fuploads%2f2021%2f08%2f16%2f6b900cffbd0b565c7ad8b3f5c8b6f502.jpg&ehk=F%2bsBRxzqa3UPTJtdve2S61fanqDREitT27%2ff3Z9qw1A%3d&risl=&pid=ImgRaw&r=0">
+            <!-- 描述 -->
+            <p>桂花鸡米头</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://tse4-mm.cn.bing.net/th/id/OIP-C.EuVrmgveCbfUCGGR-iQm0gHaFe?pid=ImgDet&rs=1">
+            <!-- 描述 -->
+            <p>桂花糖藕</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://www.taihuye.com/UpLoad/202104/2021041233083325.jpg">
+            <!-- 描述 -->
+            <p>莼菜银鱼羹</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://p1.ssl.qhimg.com/t011dc295e7c30b0565.jpg">
+            <!-- 描述 -->
+            <p>生煎</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://cp1.douguo.com/upload/caiku/3/3/2/yuan_33baf2bb85798e8bb6e78cda3424b4b2.jpeg">
+            <!-- 描述 -->
+            <p>苏式鲜肉月饼</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://cp1.douguo.com/upload/caiku/8/6/4/690x390_86b219fd7c52a5b9e07ba9944f0de1c4.jpg">
+            <!-- 描述 -->
+            <p>赤豆圆子</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://pic.baike.soso.com/ugc/baikepic2/45321/cut-20150617104430-1008374371.jpg/0">
+            <!-- 描述 -->
+            <p>枣泥拉糕</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://cdn.haochu.com/d/file/20130218/af2fb764fa53061428d38ad0bf4dc95d.jpg">
+            <!-- 描述 -->
+            <p>酒酿饼</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://pic2.zhimg.com/v2-f6cc0c5d1946e80cbef676a166acf575_r.jpg">
+            <!-- 描述 -->
+            <p>雪花蟹斗</p>
+        </li>
+        <li>
+            <!-- 图片 -->
+            <img src="https://tse2-mm.cn.bing.net/th/id/OIP-C.YAw-YwlIEhYxFk-BXgO2tgHaE0?pid=ImgDet&rs=1">
+            <!-- 描述 -->
+            <p>酱方</p>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

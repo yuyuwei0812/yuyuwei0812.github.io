@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ch-ZN">
+<head>
+	<meta charset="UTF-8" />
+	<title>金鸡湖</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">        
+</head>
+<body onselectstart="return false;">
+<div class="konan" id="konan">
+<!--改写为模板字符串-->
+<div class="wrap_photo" id="wrap_photo">
+    <!--photo负责平移和旋转 添加翻转事件-->
+    <!--{}是随便定义的，{{ }}还是{ }，都一样；但是不能是<img>因为有可能会和内容冲突就。定义一个特殊格式的字符串是用于后续进行字符串替换。-->
+	<div class="photo photo_front" onclick="turn(this)" id="photo_{index}">  
+	<!--photo-wrap负责翻转-->
+	    <div class="photo-wrap">   
+		    <div class="side side-front">
+			    <p class="image"><img src="{image}" /></p>
+			    <p class="caption">{caption}</p>
+		    </div>
+		    <div class="side side-back">
+			    <p class="desc">{desc}</p>
+		    </div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="js/photo_data.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>

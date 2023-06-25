@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>灵秀苏州</title>
+		<!-- 引入样式 -->
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<style>
+			/* 底部 */
+			.footer{
+				/* 设置长度 */
+				width: 100%;
+				/* 上下内边距10 左右0 */
+				padding: 10px 0;
+				/* 字体颜色 */
+				color: #FFF;
+				/* 背景颜色 */
+				background: #333;
+				/* 文字居中 */
+				text-align: center;
+				/* 字体大小 */
+				font-size: 14px;
+			}
+			/* 去掉所有标签的默认内外边距 */
+			*{
+				/* 外边距为0 */
+				margin: 0;
+				/* 内边距为0 */
+				padding: 0;
+			}
+			/* 去除列表的默认样式 */
+			li{
+				list-style: none;
+			}
+			/* 去掉超链接a标签的默认下划线 */
+			a{
+				text-decoration: none;
+			}
+			/* 导航栏 */
+			.header{
+				/* 长度设置为100% */
+				width: 100%;
+				/* 设置高度 */
+				height: 60px;
+				/* 设置行高 */
+				line-height: 60px;
+				/* 设置背景颜色 */
+				background: #FFFFFF;
+				/* 设置阴影 */
+				box-shadow: 2px 3px 5px #ccc;
+			}
+			/* 导航内容区域 */
+			.headerf{
+				/* 设置长度 */
+				width: 1200px;
+				/* 居中显示 */
+				margin: auto;
+			}
+			/* logo图片 */
+			.headerf img{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 设置高度 */
+				height: 35px;
+				/* 12px的上侧外边距 */
+				margin-top: 12px;
+			}
+			/* 导航栏 */
+			.headerf ul{
+				/* 右浮动 靠右对齐 */
+				float: right;
+			}
+			.headerf ul li{
+				/* 左浮动 靠左对齐 */
+				float: left;
+				/* 100px的左侧外边距 */
+				margin-left: 100px;
+			}
+			/* 导航栏a标签 */
+			.headerf ul li a{
+				/* 设置颜色 */
+				color: #000000;
+				/* 底部内边距设置为5px */
+				padding-bottom: 5px;
+			}
+			/* 设置class为active 下的a */
+			.headerf ul .active a{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 鼠标移入效果 */
+			.headerf ul li a:hover{
+				/* 设置颜色 */
+				color: #15c5ce;
+				/* 设置背景 */
+				border-bottom: 3px solid #15c5ce;
+			}
+			/* 文化特色 */
+			.text{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			/* 文章 */
+			.text-list{
+				/* 弹性布局 */
+				display: flex;
+				/* 换行处理 */
+				flex-wrap: wrap;
+				/* 两端对齐 */
+				justify-content: space-between;
+				/* 设置长度 */
+				width: 30%;
+				/* 上下左右内边距为 10 */
+				padding: 10px;
+				/* 盒子阴影 */
+				box-shadow: 2px 1px 10px #CCC;
+				/* 上下外边距10 */
+				margin: 10px 0;
+			}
+			.text .text-list .list-img{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-img img{
+				/* 设置长度 */
+				width: 100%;
+				/* 设置行高 */
+				height: 220px;
+				/* 防止图片变形 */
+				object-fit: cover;
+			}
+			.text .text-list .list-text{
+				/* 设置长度 */
+				width: 100%;
+			}
+			.text .text-list .list-text h3{
+				/* 上下外边距为5 左右为0 */
+				margin: 5px 0;
+				/* 设置字体颜色 */
+				color: #333;
+			}
+			.text .text-list .list-text p{
+				/* 设置行高 */
+				line-height: 1.6;
+				/* 设置字体大小 */
+				font-size: 15px;
+				/* 设置字体颜色 */
+				color: #777777;
+			}
+			/* 文化特色详情页 */
+			.content-detail{
+				/* 设置长度 */
+				width: 1200px;
+				/* 上下外边距50 左右居中 */
+				margin: 50px auto;
+			}
+			.content-title{
+				/* 文字居中 */
+				text-align: center;
+				/* 1px的下侧实线 */
+				border-bottom: 1px solid #CCCCCC;
+			}
+			.content-title h3{
+				/* 标题大小 */
+				font-size: 24px;
+				/* 上下外边距20 左右0 */
+				margin: 20px 0;
+			}
+			.content-text{
+				/* 上侧内边距 */
+				padding-top: 20px;
+			}
+			.content-text p{
+				/* 上下外边距5 左右0 */
+				margin: 5px 0;
+				/* 字体大小 */
+				font-size: 16px;
+				/* 首行缩进2格 */
+				text-indent: 2em;
+				/* 文字行高 */
+				line-height: 1.6;
+			}
+			.content-text img{
+				/* 设置成块级元素 */
+				display: block;
+				/* 最大长度 */
+				max-width: 100%;
+				/* 上下外边距5 左右居中 */
+				margin: 5px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<body>
+			<!-- 导航栏 -->
+			<div class="header">
+				<!-- 导航栏内容区 -->
+				<div class="headerf">
+					<!-- logo -->
+					<img src="https://ts1.cn.mm.bing.net/th/id/R-C.e2d0e3a083cc027a5945c76a546ed046?rik=svyAxzkYk5XpNA&riu=http%3a%2f%2fimg.dahepiao.com%2fuploads%2fallimg%2f200608%2f164369-20060Q50911Q3.jpg&ehk=gUNOCzfvtAKu75U74R4H0SSIFX3USWclNnr37HJrItk%3d&risl=&pid=ImgRaw&r=0" alt="">
+					<!-- 菜单栏 -->
+					<ul>
+						<!-- 当前页高亮样式 -->
+						<li>
+							<a href="../首页/page2.html">首页</a>
+						  </li>
+						  <li>
+							  <a href="../美食&文化/美食.html">美食特色</a>
+						  </li>
+						  <li>
+							  <a href="../旅游部分/旅游景点.html">旅游景点</a>
+						  </li>
+						  <li  class="active">
+							  <a href="../美食&文化/文化特色.html">文化特色</a>
+						  </li>
+					</ul>
+				</div>
+			</div>
+			<!-- 文化特色详情页 -->
+			<div class="content-detail">
+				<!-- 文章标题 -->
+				<div class="content-title">
+					<!-- 标题内容 -->
+					<h3>苏州评弹</h3>
+				</div>
+				<!-- 文章内容 -->
+				<div class="content-text">
+					<p>苏州评话是采用以苏州话为代表的吴语方言徒口讲说表演的曲艺说书形式，流行于江苏南部和浙江北部，包括上海大部的吴语地区，通常与苏州弹词合称“苏州评弹”。在流行地区，苏州评话俗称“大书”，苏州弹词俗称“小书”，总称“说书”。
+						苏州评话的传统节目约有五十多部，其中包括讲史性的《西汉》、《东汉》、《三国》、《隋唐》、《金枪》、《岳传》、《英烈》等，俗称“长靠书”，又称“着甲书”；侠义性的《水浒》、《七侠五义》、《小五义》、《绿牡丹》、《金台传》等，俗称“短打书”,此外还有神怪故事和公案书如《封神榜》、《济公传》、《彭公案》、《施公案》等。
+						苏州弹词是以说唱相间的方式用苏州方言表演的“小书”类曲艺说书形式，发源并流行于以苏州为中心的江苏东南部、浙江北部和上海等吴语方言区，大约形成于明末清初。由于和苏州评话同属说书行业，曾经拥有共同的行会组织，民间即习惯性地将其与苏州评话合称之为“苏州评弹”。
+					</p>
+					<img src="https://ts1.cn.mm.bing.net/th/id/R-C.e2d0e3a083cc027a5945c76a546ed046?rik=svyAxzkYk5XpNA&riu=http%3a%2f%2fimg.dahepiao.com%2fuploads%2fallimg%2f200608%2f164369-20060Q50911Q3.jpg&ehk=gUNOCzfvtAKu75U74R4H0SSIFX3USWclNnr37HJrItk%3d&risl=&pid=ImgRaw&r=0" >
+					<p>
+						苏州弹词的表演通常以说为主，说中夹唱。唱时多用三弦或琵琶伴奏，说时也有采用醒木作为道具击节拢神的情形。演唱采用的音乐曲调为板腔体的说书调，即所谓“书调”。因流传中形成了诸多的音乐流派，故“书调”又被称之为“基本调”。早期演出多为一个男艺人弹拨三弦“单档”说唱，后来出现了两个人搭档的“双档”和三人搭档的“三个档”表演。
+					</p>
+				</div>
+			</div>
+			<!-- 底部 -->
+			<div class="footer">
+				<!-- 文字 -->
+				<p>Copyright © 2022 苏州旅游网站</p>
+			</div>
+	</body>
+</html>
